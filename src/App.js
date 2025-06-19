@@ -36,7 +36,7 @@ function App() {
         <Route path="/" element={
           <>
             <Hero />
-            <FilterSort onFilterChange={handleFilterChange} onSortChange={handleSortChange} /> NEW
+            {/* <FilterSort onFilterChange={handleFilterChange} onSortChange={handleSortChange} /> */}
             
             <ProductSection category="Mobiles" filters={filters} sortOption={sortOption} />
             <ProductSection category="TVs" filters={filters} sortOption={sortOption} />
