@@ -1,0 +1,173 @@
+/* src/Components/Header.css (MODIFIED - for logo image) */
+.header {
+  background-color: #282c34;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* NEW: Styles for the brand logo container */
+.brand-logo {
+  display: flex; /* Use flexbox to align image and text */
+  align-items: center; /* Vertically center them */
+  /* No margin here, let the Link handle it or adjust brand-link */
+}
+
+.brand-link { /* Make the whole brand area clickable without text-decoration */
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent header */
+    display: flex; /* Ensure flex properties apply to its children */
+    align-items: center;
+}
+
+.logo-image {
+  height: 40px; /* Adjust size as needed, e.g., 40px */
+  width: auto; /* Maintain aspect ratio */
+  margin-right: 8px; /* Small gap between image and text */
+  border-radius: 50%; /* Make it round if you want, or adjust for square */
+  object-fit: contain; /* Ensures image fits without cropping */
+}
+
+.logo-text { /* Styles for the "MyStore" text */
+  font-size: 1.8em;
+  margin: 0; /* Remove default h1 margin */
+  color: white; /* Ensure text color is white */
+  cursor: pointer; /* Indicate it's clickable */
+}
+
+
+.search {
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: 1px solid #555;
+  background-color: #3a3f4a;
+  color: white;
+  width: 300px;
+  max-width: 40%;
+  margin: 0 20px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.search::placeholder {
+  color: #aaa;
+}
+
+.search:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cart-count, .wishlist-count {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9em;
+  transition: background-color 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cart-count:hover, .wishlist-count:hover {
+  background-color: #0056b3;
+}
+
+.welcome-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.welcome {
+  margin-right: 10px;
+  font-size: 0.95em;
+  color: #a0a0a0;
+  transition: color 0.2s;
+}
+
+.welcome-link:hover .welcome {
+  color: #007bff;
+}
+
+.auth-buttons button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.auth-buttons button:hover {
+  background-color: #0056b3;
+}
+
+.auth-buttons button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+  }
+  /* Ensure brand logo also centers on smaller screens */
+  .brand-logo {
+    width: 100%;
+    justify-content: center; /* Center image and text */
+    margin-bottom: 10px;
+  }
+  .search {
+    width: 90%;
+    max-width: 90%;
+    margin: 0;
+  }
+  .auth-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 10px 10px;
+  }
+  .logo-text { /* Use logo-text instead of .logo */
+    font-size: 1.5em;
+  }
+  .logo-image { /* Adjust image size for very small screens */
+    height: 30px;
+    margin-right: 5px;
+  }
+  .search {
+    padding: 6px 10px;
+    font-size: 0.9em;
+  }
+  .auth-buttons button,
+  .cart-count, .wishlist-count {
+    padding: 6px 10px;
+    font-size: 0.8em;
+  }
+}

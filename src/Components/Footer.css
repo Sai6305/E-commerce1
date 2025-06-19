@@ -1,0 +1,73 @@
+.footer {
+  background-color: #343a40;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-text {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.socials {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.socials a {
+  color: #ccc;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.socials a:hover {
+  color: #fff;
+}
+
+/* ======== RESPONSIVE DESIGN ======== */
+
+/* Mobile (up to 600px) */
+@media (max-width: 600px) {
+  .footer-text {
+    font-size: 14px;
+  }
+
+  .socials {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .socials a {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+}
+
+/* Tablets (601px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .footer-text {
+    font-size: 15px;
+  }
+
+  .socials a {
+    font-size: 15px;
+  }
+}
+
+/* Desktops (above 1024px) */
+@media (min-width: 1025px) {
+  .footer-text {
+    font-size: 16px;
+  }
+
+  .socials a {
+    font-size: 16px;
+  }
+}

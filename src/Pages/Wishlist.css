@@ -1,0 +1,123 @@
+/* src/Pages/Wishlist.css (NEW FILE) */
+.wishlist-page {
+  padding: 80px 20px 40px; /* Top padding for header */
+  background-color: #f8f8f8;
+  min-height: calc(100vh - 120px);
+  text-align: center;
+}
+
+.wishlist-page h2 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.empty-wishlist {
+  font-size: 1.2em;
+  color: #666;
+  margin-top: 50px;
+}
+
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.wishlist-item-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.wishlist-item-image-link {
+  flex-shrink: 0;
+}
+
+.wishlist-item-image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 5px;
+  border: 1px solid #eee;
+}
+
+.wishlist-item-details {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.wishlist-item-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.wishlist-item-name:hover {
+  color: #007bff;
+}
+
+.wishlist-item-price {
+  font-size: 1.1em;
+  color: #007bff;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.wishlist-item-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.move-to-cart-btn, .remove-from-wishlist-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.2s, transform 0.2s;
+  font-weight: 500;
+}
+
+.move-to-cart-btn {
+  background-color: #28a745; /* Green for add to cart */
+  color: white;
+}
+
+.move-to-cart-btn:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+.remove-from-wishlist-btn {
+  background-color: #dc3545; /* Red for remove */
+  color: white;
+}
+
+.remove-from-wishlist-btn:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .wishlist-item-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .wishlist-item-details {
+    text-align: center;
+  }
+  .wishlist-item-actions {
+    justify-content: center;
+  }
+}

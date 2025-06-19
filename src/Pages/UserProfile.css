@@ -1,0 +1,169 @@
+/* src/Pages/UserProfile.css (NEW FILE) */
+.user-profile-page {
+  padding: 80px 20px 40px;
+  background-color: #f8f8f8;
+  min-height: calc(100vh - 120px);
+  text-align: center;
+}
+
+.user-profile-page h2 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.profile-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.profile-details, .order-history-section {
+  text-align: left;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.profile-details h3, .order-history-section h3 {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.profile-details p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #555;
+}
+
+.profile-details p strong {
+  color: #333;
+}
+
+.edit-btn {
+  background-color: #17a2b8; /* Info blue */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 20px;
+  transition: background-color 0.2s;
+}
+
+.edit-btn:hover {
+  background-color: #138496;
+}
+
+.profile-form .form-group {
+  margin-bottom: 15px;
+}
+
+.profile-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.profile-form input[type="text"],
+.profile-form input[type="email"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+.profile-form .form-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.profile-form .save-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.2s;
+}
+
+.profile-form .save-btn:hover {
+  background-color: #218838;
+}
+
+.profile-form .cancel-btn {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.2s;
+}
+
+.profile-form .cancel-btn:hover {
+  background-color: #5a6268;
+}
+
+
+.order-history-section p {
+  color: #777;
+  font-style: italic;
+  font-size: 1em;
+}
+
+.logout-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-size: 1.1em;
+  margin-top: 20px; /* Space from other sections */
+  transition: background-color 0.2s;
+  align-self: flex-end; /* Push button to the right if container is flex column */
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .user-profile-page {
+    padding: 70px 15px 30px;
+  }
+  .profile-container {
+    padding: 15px;
+  }
+  .profile-details h3, .order-history-section h3 {
+    font-size: 1.5em;
+  }
+  .profile-form .form-actions {
+    flex-direction: column;
+  }
+  .profile-form .form-actions button {
+    width: 100%;
+  }
+}

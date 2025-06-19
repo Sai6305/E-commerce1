@@ -1,0 +1,175 @@
+/* src/Components/ProductSection.css (MODIFIED) */
+.product-section {
+  padding: 40px 20px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #eee;
+}
+
+.product-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.2em;
+  color: #333;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  position: relative; /* For the "Coming Soon" badge */
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+  max-width: 100%;
+  height: 180px; /* Fixed height for consistent card appearance */
+  object-fit: contain; /* Ensure image fits without cropping */
+  margin-bottom: 15px;
+  cursor: pointer; /* Indicate clickable image */
+}
+
+.product-card h3 {
+  font-size: 1.3em;
+  color: #333;
+  margin-bottom: 8px;
+  height: 2.8em; /* Fixed height for title to prevent layout shifts */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  -webkit-box-orient: vertical;
+}
+
+.product-card h3 a { /* Style for the link inside h3 */
+  text-decoration: none;
+  color: #333;
+  transition: color 0.2s;
+}
+
+.product-card h3 a:hover {
+  color: #007bff; /* Example hover color */
+}
+
+
+.price-display { /* NEW */
+  margin-bottom: 10px;
+}
+
+.current-price { /* NEW */
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #007bff;
+  margin-right: 8px;
+}
+
+.original-price { /* NEW */
+  font-size: 0.9em;
+  color: #888;
+  text-decoration: line-through;
+  margin-right: 8px;
+}
+
+.discount-percent { /* NEW */
+  font-size: 0.9em;
+  color: #28a745; /* Green for discount */
+  font-weight: bold;
+}
+
+.product-rating { /* NEW */
+  color: gold;
+  margin-bottom: 10px;
+}
+
+.product-actions { /* NEW */
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+  margin-top: auto; /* Push buttons to the bottom */
+}
+
+.product-card button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.2s ease-in-out;
+  flex: 1; /* Make buttons fill available space */
+}
+
+.product-card button:hover {
+  background-color: #0056b3;
+}
+
+.wishlist-btn { /* NEW */
+  background-color: #dc3545; /* Red heart */
+  padding: 10px 12px; /* Adjust padding for icon */
+  font-size: 1.1em;
+  flex: 0 0 auto; /* Don't grow, keep original size */
+}
+
+.wishlist-btn:hover { /* NEW */
+  background-color: #c82333;
+}
+
+.coming-soon-badge { /* NEW */
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ffc107; /* Yellow badge */
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  font-weight: bold;
+  z-index: 10;
+}
+
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card {
+    padding: 10px;
+  }
+  .product-card img {
+    height: 150px;
+  }
+  .product-card h3 {
+    font-size: 1.1em;
+  }
+  .current-price {
+    font-size: 1.2em;
+  }
+  .product-card button {
+    padding: 8px 10px;
+    font-size: 0.8em;
+  }
+}

@@ -1,0 +1,58 @@
+/* ============================= */
+/* 🚀 Base Hero Styles */
+/* ============================= */
+.hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;  /* center horizontally */
+  align-items: center;      /* center vertically if height is fixed */
+  padding: 20px 10px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.hero img {
+  width: 100%;
+  max-width: 1200px;       /* max container width */
+  height: auto;
+  max-height: 500px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out;
+}
+
+.hero img:hover {
+  transform: scale(1.01); /* slight zoom on hover */
+}
+
+/* ============================= */
+/* 📱 Responsive Styles */
+/* ============================= */
+
+/* Small Devices (Phones) */
+@media (max-width: 600px) {
+  .hero {
+    padding: 10px;
+  }
+
+  .hero img {
+    max-height: 220px;
+    border-radius: 8px;
+  }
+}
+
+/* Medium Devices (Tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .hero img {
+    max-height: 350px;
+    border-radius: 10px;
+  }
+}
+
+/* Large Devices (Desktops) */
+@media (min-width: 1025px) {
+  .hero img {
+    max-height: 500px;
+  }
+}
